@@ -18,7 +18,7 @@ RUN set -x \
  && make build \
  && cp /src/dist/aws-nuke /usr/local/bin/
 
-FROM alpine:3.18.3
+FROM alpine:3.18
 RUN apk add --no-cache ca-certificates
 
 COPY --from=builder /usr/local/bin/* /usr/local/bin/
